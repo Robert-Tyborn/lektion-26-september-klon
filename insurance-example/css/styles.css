@@ -271,3 +271,77 @@ p {
     min-height: 20rem;
     background-color: gray;
 }
+
+@media screen and (max-width:768px){
+    body{
+        background-color: #A9A19E;
+    }
+    .wrapper {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "welcome"
+        "learn"
+        "join"
+        "navigation"
+        "info"
+        "cards"
+        "about"
+        "how"
+        "up"
+        "footer" ;
+    }  
+    .welcome{
+        padding: 2rem;
+
+    }
+    .learn, .join{
+        min-height: 16rem;
+    }
+    .navigation{
+        display: none;
+    }
+    .info {
+        flex-direction: column;
+        background-color: #A9A19E;
+        height: 28rem;
+    }
+    .info__join, .info__text{
+        padding: 0.8rem;
+        padding-bottom: 0;
+    }
+    .info__join h1{
+        margin: 0;
+    }
+    .second-button{
+        display: none;
+    }
+    .cards {
+        grid-area: cards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #A9A19E;
+        gap: 3rem;
+        max-height: 75rem;
+        margin-bottom: 5rem;
+    }
+    .card{
+        transform: unset;
+    }
+    .about-us{
+        padding: 3rem;
+        font-size: 14px;
+    }
+    .about-us h2{
+        margin-bottom: 1rem;
+    }
+    .about-us-p{
+        margin-bottom: 1rem;
+    }
+    .how {
+        grid-template-columns: 1fr;
+    }
+}
