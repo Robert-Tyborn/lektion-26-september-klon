@@ -295,7 +295,10 @@ p {
     }  
     .welcome{
         padding: 2rem;
-
+        background-size: 80%;
+    }
+    .welcome__text{
+        color: #000000;
     }
     .learn, .join{
         min-height: 16rem;
