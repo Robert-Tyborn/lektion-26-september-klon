@@ -73,6 +73,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #F17949;
+    min-height: 16rem;
 }
 
 .join {
@@ -82,6 +83,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #FAB131;
+    min-height: 16rem;
 }
 
 .join-button {
@@ -272,15 +274,12 @@ p {
     background-color: gray;
 }
 
-@media screen and (max-width:768px){
+@media screen and (min-width:300px) and (max-width:768px){
     body{
         background-color: #A9A19E;
     }
     .wrapper {
-        max-width: 1000px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
+        grid-template-columns: 1fr; /* eller 100% */
         grid-template-areas: 
         "welcome"
         "learn"
@@ -297,7 +296,7 @@ p {
         padding: 2rem;
         background-size: 80%;
     }
-    .welcome__text{
+    .welcome__heading{
         color: #000000;
     }
     .learn, .join{
@@ -318,12 +317,10 @@ p {
     .info__join h1{
         margin: 0;
     }
-    .second-button{
+    .info .info__join .join-button{
         display: none;
     }
     .cards {
-        grid-area: cards;
-        display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #A9A19E;
